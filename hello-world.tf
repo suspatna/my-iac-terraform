@@ -7,5 +7,9 @@ provider "aws" {
 resource "aws_instance" "example" {
   ami           = "<ami-name-basedonregion>"
   instance_type = "t2.micro"
+  tags={
+    Name="ec2-using-terraform",
+    Use= "This is for sample demo"
+  }
 }
 
